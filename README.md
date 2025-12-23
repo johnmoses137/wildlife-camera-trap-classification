@@ -37,9 +37,22 @@ Extracts secondary animals (detections beyond the first), crops them, re-classif
 
 ## Requirements
 
+### Software Dependencies
 - Python 3.8+
-- SpeciesNet environment installed at `~/speciesnet_env/`
-- Required packages: pandas, opencv-python, matplotlib, exifread, tqdm, squarify
+- SpeciesNet model (installation instructions at [SpeciesNet repository])
+- Required Python packages:
+  - pandas
+  - opencv-python (cv2)
+  - matplotlib
+  - exifread
+  - tqdm
+  - squarify
+  - numpy
+
+### Installation Notes
+- Scripts assume SpeciesNet is installed and accessible via Python environment
+- Modify the `speciesnet_py` path in `run_speciesnet_model.py` scripts to match your installation location
+- For cluster/HPC environments, adjust paths according to your system configuration
 
 ## Quick Start
 
