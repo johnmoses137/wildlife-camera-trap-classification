@@ -9,10 +9,23 @@ This project implements a novel two-pass approach to camera trap image classific
 **Academic Context:** Master's degree project developed in collaboration with biology department for wildlife research applications.
 
 ## Key Innovation
-
 **Problem:** SpeciesNet detects multiple animals but only classifies one per image  
 **Solution:** Crop secondary detections and re-classify them separately  
 **Result:** Complete identification of all animals in camera trap footage
+
+## Why This Matters
+Standard camera trap pipelines often undercount species presence when multiple animals appear in a single frame. By re-classifying secondary detections, this system improves species coverage and reduces missed detections—leading to more accurate biodiversity metrics and downstream ecological analyses.
+
+### Model Dependency
+
+This project relies on the SpeciesNet model, which must be installed separately.
+Please follow installation instructions from the official SpeciesNet repository.
+
+### Environment Notes
+
+This project was developed and executed in a cluster/HPC environment using a custom Python virtual environment. 
+The provided `requirements.txt` captures only project-level Python dependencies and is intended for reproducibility in local or cluster-based setups.
+
 
 ## Workflow Structure
 
@@ -21,6 +34,9 @@ Processes full-resolution camera trap images through SpeciesNet and creates comp
 
 ### Phase 2: Secondary Detection Processing  
 Extracts secondary animals (detections beyond the first), crops them, re-classifies via SpeciesNet, and merges results with original dataset while preserving temporal and spatial metadata.
+
+
+
 
 ## Repository Structure
 ```
